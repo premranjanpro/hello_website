@@ -216,6 +216,7 @@ footer {
   font-size: 14px;
   border-radius: 12px;
   margin-bottom: 32px;
+  text-decoration: none;
 }
 
 .back-button:hover {
@@ -280,6 +281,7 @@ footer {
 .contact-icon {
   color: #fb7185;
   margin-bottom: 16px;
+  display: inline-block;
 }
 
 .contact-info-card h3 {
