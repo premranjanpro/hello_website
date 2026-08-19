@@ -3,73 +3,92 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shipping & Delivery Policy - Hello24</title>
+  <title>Shipping & Digital Delivery Policy - Hello24</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#discovery">Find People & Experts</a></li>
+      <li><a href="index.html#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="index.html#download" class="btn btn-primary btn-sm">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Get App
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
     <a class="back-button" href="index.html">
-      <i data-lucide="arrow-left" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></i> Back to Home
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Home
     </a>
-    <h1>Shipping & Delivery Policy</h1>
-    <p class="last-updated">Last Updated: July 09, 2026</p>
+    <h1 style="font-size: 42px; margin-bottom: 8px;">Shipping & Digital Delivery</h1>
+    <p style="color: var(--text-subtle); margin-bottom: 30px;">Last Updated: August 2026</p>
 
-    <section class="legal-section">
-      <h2>1. Digital Service Delivery</h2>
-      <p>Hello24 Technologies Pvt. Ltd. provides a peer-to-peer anonymous audio communication marketplace. All services offered on the Hello24 app are digital, real-time, and virtual.</p>
-    </section>
+    <div class="legal-section">
+      <h2>1. Instant Digital Fulfillment</h2>
+      <p>
+        Hello24 delivers software services and digital talktime credit. No physical goods or packages are shipped. Talktime wallet top-ups and host passes are activated instantly within seconds upon successful UPI / Payment Gateway confirmation.
+      </p>
+    </div>
 
-    <section class="legal-section">
-      <h2>2. No Physical Shipping</h2>
-      <p>There are no physical products, merchandise, or tangible goods sold or shipped via our platform. Consequently, shipping rates, physical package delivery tracking, and courier handling details do not apply to our services.</p>
-    </section>
-
-    <section class="legal-section">
-      <h2>3. Instant In-App Wallet Activation</h2>
-      <p>Upon successful payment confirmation through our integrated payment gateways, wallet credits are processed and credited to the user's in-app account wallet immediately. In the event of network delay, delivery may take up to 24 hours.</p>
-    </section>
+    <div class="legal-section">
+      <h2>2. Confirmation and Invoicing</h2>
+      <p>
+        Upon successful payment completion, an electronic receipt with the transaction ID, GST breakdown, and updated wallet ledger is immediately available in the app transaction history and emailed to your registered address.
+      </p>
+    </div>
   </div>
 
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>Next-generation real-time app-to-app voice & video calling marketplace.</p>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Important Links</h4>
         <a href="about.html">About Us</a>
         <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Legal Policies</h4>
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
         <a href="shipping.html">Shipping & Delivery</a>
       </div>
+      <div class="footer-column">
+        <h4>Trust & Tech</h4>
+        <a href="index.html#livekit-tech">LiveKit Engine</a>
+        <a href="privacy.html">Privacy Shield</a>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

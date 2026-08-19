@@ -3,89 +3,1012 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hello24 - Premium Audio Marketplace</title>
+  <title>Hello24 - Next-Gen App-to-App Voice & Video Calling | Friends & Professionals</title>
+  <meta name="description" content="Connect instantly 1-on-1 with friends, new people, and top verified professionals. Powered by LiveKit WebRTC and LiveKit Egress for HD audio/video calls with 100% privacy.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active-link">Home</a></li>
+      <li><a href="#discovery">Find People & Experts</a></li>
+      <li><a href="#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <div class="live-pill">
+        <span class="pulse-dot"></span>
+        <span>14,820+ Live Calls</span>
+      </div>
+      <button class="btn btn-primary btn-sm" onclick="openCallModal('Priya Sharma (22)', 'Late Night Talks & Bollywood', 'assets/images/hero_app_mockup.jpg', '5')">
+        <i data-lucide="zap" style="width: 16px; height: 16px;"></i> Quick Call
+      </button>
+    </div>
   </nav>
 
-  <section class="hero">
-    <div>
-      <h1>No photos. Just voice, vibe and value.</h1>
-      <p>Anonymous premium audio conversations with verified hosts, wallet billing, ratings and moderation.</p>
-      <a href="pricing.html"><button>Start Listening</button></a>
-    </div>
-    <div class="phone">
-      <div class="wave">
-        <i data-lucide="radio" style="width: 64px; height: 64px; color: #fff;"></i>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <div class="hero-badge-container">
+        <span class="hero-badge highlight">
+          <i data-lucide="sparkles" style="width: 14px; height: 14px;"></i> Powered by LiveKit WebRTC & Egress
+        </span>
+        <span class="hero-badge">
+          <i data-lucide="shield-check" style="width: 14px; height: 14px; color: #34d399;"></i> 100% Number-Free Privacy
+        </span>
       </div>
-      <h3 style="margin-top: 24px; font-size: 24px;">@MidnightMuse</h3>
-      <p style="color: #cbd5e1; font-size: 16px;">Hindi • Life Talk • ₹7/min</p>
-      <a href="pricing.html"><button style="margin-top: 16px;">Call Now</button></a>
+
+      <h1 class="hero-title">
+        Talk 1-on-1 with <span class="gradient-text">Friends, New People</span> & Top <span class="gradient-text-gold">Professionals</span>.
+      </h1>
+
+      <p class="hero-subtitle">
+        Instant app-to-app crystal clear HD audio & video calls. Connect with friendly companions (Ladka/Ladki se direct baat), or consult certified doctors, astrologers & career mentors 24/7 with per-second transparent billing.
+      </p>
+
+      <div class="hero-ctas">
+        <button class="btn btn-primary btn-lg" onclick="openCallModal('Dr. Alistair Vance', 'Verified Medical & Mental Health Expert', 'assets/images/social_expert_calling.jpg', '25')">
+          <i data-lucide="phone-outgoing" style="width: 20px; height: 20px;"></i> Simulate Live Call Demo
+        </button>
+        <a href="#download" class="btn btn-secondary btn-lg">
+          <i data-lucide="download" style="width: 20px; height: 20px;"></i> Download App
+        </a>
+      </div>
+
+      <div class="hero-stats-row">
+        <div class="hero-stat-item">
+          <h3>&lt; 35ms</h3>
+          <p>Ultra-low LiveKit Latency</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>48 kHz</h3>
+          <p>Opus Studio HD Audio</p>
+        </div>
+        <div class="hero-stat-item">
+          <h3>100%</h3>
+          <p>Encrypted & Anonymous</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero Visual / Mockup with Interactive Effects -->
+    <div class="hero-visual-wrapper">
+      <div class="hero-mockup-frame">
+        <img src="assets/images/hero_app_mockup.jpg" alt="Hello24 App-to-App Calling Interface" class="hero-mockup-img" id="hero-img">
+      </div>
+
+      <!-- Floating Badges -->
+      <div class="floating-card card-top">
+        <div style="background: rgba(16, 185, 129, 0.2); padding: 8px; border-radius: 10px;">
+          <i data-lucide="mic" style="width: 20px; height: 20px; color: #10b981;"></i>
+        </div>
+        <div>
+          <h5 style="font-size: 13px; font-weight: 700; color: #fff;">Live HD Audio Stream</h5>
+          <span style="font-size: 11px; color: #34d399;">Opus 48kHz • Lossless WebRTC</span>
+        </div>
+      </div>
+
+      <div class="floating-card card-bottom">
+        <div style="background: rgba(236, 72, 153, 0.2); padding: 8px; border-radius: 10px;">
+          <i data-lucide="heart" style="width: 20px; height: 20px; color: #ec4899;"></i>
+        </div>
+        <div>
+          <h5 style="font-size: 13px; font-weight: 700; color: #fff;">Boy & Girl Vibe Match</h5>
+          <span style="font-size: 11px; color: #cbd5e1;">99.4% Match Satisfaction</span>
+        </div>
+      </div>
     </div>
   </section>
 
-  <section class="features">
-    <div>
-      <i data-lucide="mic-2" style="width: 32px; height: 32px; color: #a78bfa;"></i>
-      <h2>Voice Preview</h2>
-      <p>Listen to short intros before calling.</p>
+  <!-- Tech Highlights Strip -->
+  <div class="tech-strip">
+    <div class="tech-item">
+      <i data-lucide="server" class="tech-icon"></i>
+      <span>LiveKit SFU Architecture</span>
     </div>
-    <div>
-      <i data-lucide="shield-check" style="width: 32px; height: 32px; color: #a78bfa;"></i>
-      <h2>Safe by Design</h2>
-      <p>Block, report, suspend and terms audit.</p>
+    <div class="tech-item">
+      <i data-lucide="video" class="tech-icon"></i>
+      <span>LiveKit Egress Auto Recording</span>
     </div>
-    <div>
-      <i data-lucide="wallet-cards" style="width: 32px; height: 32px; color: #a78bfa;"></i>
-      <h2>Clear Billing</h2>
-      <p>Rupee wallet, earnings and UPI payouts.</p>
+    <div class="tech-item">
+      <i data-lucide="lock" class="tech-icon"></i>
+      <span>End-to-End DTLS-SRTP Security</span>
     </div>
-    <div>
-      <i data-lucide="user-plus" style="width: 32px; height: 32px; color: #a78bfa;"></i>
-      <h2>Become Host</h2>
-      <p>₹499 activation, review, approval and fair ranking.</p>
+    <div class="tech-item">
+      <i data-lucide="wallet" class="tech-icon"></i>
+      <span>Real-Time Per-Second Billing</span>
+    </div>
+    <div class="tech-item">
+      <i data-lucide="user-check" class="tech-icon"></i>
+      <span>100% KYC Verified Experts</span>
+    </div>
+  </div>
+
+  <!-- Interactive Marketplace & Discovery Section -->
+  <section class="section" id="discovery">
+    <div class="section-header">
+      <span class="section-badge">Live Discovery Feed</span>
+      <h2 class="section-title">Connect with Who You Need, <span class="gradient-text">When You Need</span></h2>
+      <p class="section-description">
+        Choose between fun social conversations with friendly companions or get 1-on-1 private consultations with verified professional experts.
+      </p>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="tabs-container">
+      <button class="tab-btn active" onclick="switchTab('social', this)">
+        <i data-lucide="users" style="width: 18px; height: 18px;"></i> Friend & Vibe Match (Ladka/Ladki)
+      </button>
+      <button class="tab-btn" onclick="switchTab('professionals', this)">
+        <i data-lucide="award" style="width: 18px; height: 18px;"></i> Verified Professionals & Doctors
+      </button>
+      <button class="tab-btn" onclick="switchTab('rooms', this)">
+        <i data-lucide="radio" style="width: 18px; height: 18px;"></i> Live Audio Hangouts
+      </button>
+    </div>
+
+    <!-- Tab 1: Social & Friend Calling Cards -->
+    <div id="tab-social" class="cards-grid">
+      <!-- Card 1 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #f43f5e, #fb7185); display: grid; place-items: center; font-size: 24px; font-weight: 800;">👩</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Priya Sharma, 22 <i data-lucide="sparkles" class="verified-icon"></i></h4>
+            <div class="profile-category">Friendly Talk • Late Night Vibe</div>
+            <div class="rating-badge">★ 4.9 (840+ calls)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">Hindi</span>
+          <span class="tag-pill">Bollywood</span>
+          <span class="tag-pill">Music</span>
+          <span class="tag-pill">Life Talks</span>
+        </div>
+        <p class="card-bio">"Love chatting about late night thoughts, retro Bollywood, and making genuine new friends. Super chill vibe!"</p>
+        
+        <div class="audio-preview-bar" onclick="simulateVoiceBio('Priya Sharma')">
+          <div class="play-audio-btn"><i data-lucide="play" style="width: 14px; height: 14px;"></i></div>
+          <div class="mini-waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span style="font-size: 12px; color: #a78bfa; font-weight: 600;">Voice Bio (0:12)</span>
+        </div>
+
+        <div class="card-bottom-action">
+          <div class="rate-text">₹5 <span>/ min</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Priya Sharma (22)', 'Late Night Talks & Music', '', '5')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Call Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #3b82f6, #06b6d4); display: grid; place-items: center; font-size: 24px; font-weight: 800;">👨</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Aarav Kapoor, 24 <i data-lucide="sparkles" class="verified-icon"></i></h4>
+            <div class="profile-category">Gaming & Tech • Chill Companion</div>
+            <div class="rating-badge">★ 4.8 (620+ calls)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">Hindi/English</span>
+          <span class="tag-pill">Gaming</span>
+          <span class="tag-pill">Anime</span>
+          <span class="tag-pill">Gym/Fitness</span>
+        </div>
+        <p class="card-bio">"Gamer by night, casual philosopher by day. Let's talk about games, life aspirations, movies or just laugh together."</p>
+
+        <div class="audio-preview-bar" onclick="simulateVoiceBio('Aarav Kapoor')">
+          <div class="play-audio-btn"><i data-lucide="play" style="width: 14px; height: 14px;"></i></div>
+          <div class="mini-waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span style="font-size: 12px; color: #a78bfa; font-weight: 600;">Voice Bio (0:15)</span>
+        </div>
+
+        <div class="card-bottom-action">
+          <div class="rate-text">₹4 <span>/ min</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Aarav Kapoor (24)', 'Gaming & Chill Companion', '', '4')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Call Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #a855f7, #ec4899); display: grid; place-items: center; font-size: 24px; font-weight: 800;">👧</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Sneha Patel, 23 <i data-lucide="sparkles" class="verified-icon"></i></h4>
+            <div class="profile-category">Heart-to-Heart • Deep Listening</div>
+            <div class="rating-badge">★ 5.0 (1,150+ calls)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">Hindi</span>
+          <span class="tag-pill">Gujarati</span>
+          <span class="tag-pill">English Practice</span>
+          <span class="tag-pill">Travel</span>
+        </div>
+        <p class="card-bio">"Feeling lonely or had a stressful day? Call me for a warm, judgment-free listening space and uplifting positive vibes!"</p>
+
+        <div class="audio-preview-bar" onclick="simulateVoiceBio('Sneha Patel')">
+          <div class="play-audio-btn"><i data-lucide="play" style="width: 14px; height: 14px;"></i></div>
+          <div class="mini-waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span style="font-size: 12px; color: #a78bfa; font-weight: 600;">Voice Bio (0:10)</span>
+        </div>
+
+        <div class="card-bottom-action">
+          <div class="rate-text">₹6 <span>/ min</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Sneha Patel (23)', 'Heart-to-Heart & Deep Listening', '', '6')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Call Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #10b981, #06b6d4); display: grid; place-items: center; font-size: 24px; font-weight: 800;">👦</div>
+            <div class="status-dot-badge busy"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Rohan Verma, 25 <i data-lucide="sparkles" class="verified-icon"></i></h4>
+            <div class="profile-category">Motivation • Storyteller</div>
+            <div class="rating-badge">★ 4.9 (430+ calls)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">Hindi</span>
+          <span class="tag-pill">Motivation</span>
+          <span class="tag-pill">Startup Talk</span>
+          <span class="tag-pill">English</span>
+        </div>
+        <p class="card-bio">"Passion for storytelling, deep life experiences and discussing startup journeys over a casual audio call."</p>
+
+        <div class="audio-preview-bar" onclick="simulateVoiceBio('Rohan Verma')">
+          <div class="play-audio-btn"><i data-lucide="play" style="width: 14px; height: 14px;"></i></div>
+          <div class="mini-waveform"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+          <span style="font-size: 12px; color: #a78bfa; font-weight: 600;">Voice Bio (0:14)</span>
+        </div>
+
+        <div class="card-bottom-action">
+          <div class="rate-text">₹5 <span>/ min</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Rohan Verma (25)', 'Motivation & Storyteller', '', '5')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Call Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 2: Professional & Expert Calling Cards (Hidden by default) -->
+    <div id="tab-professionals" class="cards-grid" style="display: none;">
+      <!-- Prof 1 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #2563eb, #1d4ed8); display: grid; place-items: center; font-size: 24px;">👨‍⚕️</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Dr. Alistair Vance <i data-lucide="check-circle" style="color: #38bdf8; width: 16px; height: 16px;"></i></h4>
+            <div class="profile-category">Psychologist & Wellness Consultant</div>
+            <div class="rating-badge">★ 4.97 (1,840+ Consults)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">MBBS, MD</span>
+          <span class="tag-pill">Stress & Anxiety</span>
+          <span class="tag-pill">Relationship Healing</span>
+        </div>
+        <p class="card-bio">Certified clinical counselor helping users overcome anxiety, work burnout, relationship stress & emotional health in 100% private sessions.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text">₹25 <span>/ min</span></div>
+          <button class="btn btn-cyan btn-sm" onclick="openCallModal('Dr. Alistair Vance', 'Certified Medical & Wellness Consultant', '', '25')">
+            <i data-lucide="video" style="width: 14px; height: 14px;"></i> Consult Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Prof 2 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #f59e0b, #d97706); display: grid; place-items: center; font-size: 24px;">🔮</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Acharya Rajesh Shastri <i data-lucide="check-circle" style="color: #38bdf8; width: 16px; height: 16px;"></i></h4>
+            <div class="profile-category">Vedic Astrologer & Kundli Expert</div>
+            <div class="rating-badge">★ 4.94 (3,400+ Consults)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">Kundli Matching</span>
+          <span class="tag-pill">Career Growth</span>
+          <span class="tag-pill">Marriage & Finance</span>
+        </div>
+        <p class="card-bio">15+ years experience in Vedic Astrology, Tarot guidance, and planetary transit remedies for career and family harmony.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text">₹15 <span>/ min</span></div>
+          <button class="btn btn-cyan btn-sm" onclick="openCallModal('Acharya Rajesh Shastri', 'Vedic Astrologer & Kundli Expert', '', '15')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Consult Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Prof 3 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #8b5cf6, #6366f1); display: grid; place-items: center; font-size: 24px;">👩‍💼</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Advocate Meera Sen <i data-lucide="check-circle" style="color: #38bdf8; width: 16px; height: 16px;"></i></h4>
+            <div class="profile-category">Legal & Startup Advisor</div>
+            <div class="rating-badge">★ 4.91 (720+ Consults)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">LL.M (Corporate)</span>
+          <span class="tag-pill">Contract Review</span>
+          <span class="tag-pill">Startup Compliance</span>
+        </div>
+        <p class="card-bio">Instant legal advice on contracts, consumer disputes, IP rights, rental agreements, and company registrations.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text">₹30 <span>/ min</span></div>
+          <button class="btn btn-cyan btn-sm" onclick="openCallModal('Advocate Meera Sen', 'Corporate & Startup Legal Advisor', '', '30')">
+            <i data-lucide="phone" style="width: 14px; height: 14px;"></i> Consult Now
+          </button>
+        </div>
+      </div>
+
+      <!-- Prof 4 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #10b981, #059669); display: grid; place-items: center; font-size: 24px;">👨‍💻</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Devendra Singh <i data-lucide="check-circle" style="color: #38bdf8; width: 16px; height: 16px;"></i></h4>
+            <div class="profile-category">Senior Tech Lead & Mock Interviewer</div>
+            <div class="rating-badge">★ 4.99 (950+ Consults)</div>
+          </div>
+        </div>
+        <div class="card-tags">
+          <span class="tag-pill">FAANG Ex-Staff</span>
+          <span class="tag-pill">System Design</span>
+          <span class="tag-pill">Resume Review</span>
+        </div>
+        <p class="card-bio">1-on-1 coding mentorship, system design review, tech career transition guidance, and mock technical interviews.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text">₹35 <span>/ min</span></div>
+          <button class="btn btn-cyan btn-sm" onclick="openCallModal('Devendra Singh', 'Senior FAANG Tech Lead & Mentor', '', '35')">
+            <i data-lucide="video" style="width: 14px; height: 14px;"></i> Consult Now
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab 3: Group Audio Hangouts (Hidden by default) -->
+    <div id="tab-rooms" class="cards-grid" style="display: none;">
+      <!-- Room 1 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #ec4899, #f43f5e); display: grid; place-items: center; font-size: 24px;">🎙️</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Late Night Chai & Shayari</h4>
+            <div class="profile-category">Hosted by @AmanPoet</div>
+            <div class="rating-badge" style="color: #34d399;">🔴 420 Listening Live</div>
+          </div>
+        </div>
+        <p class="card-bio">Open mic for Urdu & Hindi poetry lovers. Chill ambient lofi music, warm midnight storytelling.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text" style="color: #34d399;">FREE <span>Stage</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Late Night Chai & Shayari', 'Multi-Speaker Audio Stage', '', '0')">
+            <i data-lucide="radio" style="width: 14px; height: 14px;"></i> Join Stage
+          </button>
+        </div>
+      </div>
+
+      <!-- Room 2 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #3b82f6, #8b5cf6); display: grid; place-items: center; font-size: 24px;">🚀</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Startup Pitch & Founder AMA</h4>
+            <div class="profile-category">Hosted by @StartupIndiaClub</div>
+            <div class="rating-badge" style="color: #34d399;">🔴 185 Listening Live</div>
+          </div>
+        </div>
+        <p class="card-bio">Founders sharing funding hacks, product launches, growth marketing, and live feedback on pitches.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text" style="color: #34d399;">FREE <span>Stage</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Startup Pitch & Founder AMA', 'Multi-Speaker Audio Stage', '', '0')">
+            <i data-lucide="radio" style="width: 14px; height: 14px;"></i> Join Stage
+          </button>
+        </div>
+      </div>
+
+      <!-- Room 3 -->
+      <div class="call-card">
+        <div class="card-top-row">
+          <div class="avatar-wrapper">
+            <div class="avatar-img" style="background: linear-gradient(135deg, #10b981, #06b6d4); display: grid; place-items: center; font-size: 24px;">🇬🇧</div>
+            <div class="status-dot-badge"></div>
+          </div>
+          <div class="profile-meta">
+            <h4>Daily English Speaking Practice</h4>
+            <div class="profile-category">Hosted by @FluentClub</div>
+            <div class="rating-badge" style="color: #34d399;">🔴 310 Listening Live</div>
+          </div>
+        </div>
+        <p class="card-bio">Practice fluent English conversations without fear or hesitation. Group speaking tables with native mentors.</p>
+        <div class="card-bottom-action">
+          <div class="rate-text" style="color: #34d399;">FREE <span>Stage</span></div>
+          <button class="btn btn-primary btn-sm" onclick="openCallModal('Daily English Speaking Practice', 'Language Practice Stage', '', '0')">
+            <i data-lucide="radio" style="width: 14px; height: 14px;"></i> Join Stage
+          </button>
+        </div>
+      </div>
     </div>
   </section>
 
+  <!-- LiveKit & LiveKit Egress Real-time Architecture Spotlight -->
+  <section class="section tech-deep-dive" id="livekit-tech">
+    <div class="section-header">
+      <span class="section-badge">Infrastructure Deep-Dive</span>
+      <h2 class="section-title">Built on High-Performance <span class="gradient-text">LiveKit SFU & Egress</span></h2>
+      <p class="section-description">
+        Enterprise WebRTC server technology delivering sub-40ms global latency, Opus HD audio encoding, and automated cloud recording via LiveKit Egress.
+      </p>
+    </div>
+
+    <div class="architecture-grid">
+      <div class="arch-visual">
+        <img src="assets/images/social_expert_calling.jpg" alt="LiveKit Real-Time Architecture Diagram & Calling Flow">
+      </div>
+
+      <div class="arch-feature-list">
+        <div class="arch-feature-card">
+          <div class="arch-icon-box">
+            <i data-lucide="zap" style="width: 24px; height: 24px;"></i>
+          </div>
+          <div>
+            <h4>LiveKit SFU (Selective Forwarding Unit)</h4>
+            <p>Direct WebRTC peer-to-server routing capable of millions of concurrent tracks with dynamically adaptive bitrates and sub-40ms latency.</p>
+          </div>
+        </div>
+
+        <div class="arch-feature-card">
+          <div class="arch-icon-box" style="background: rgba(236, 72, 153, 0.15); color: #f472b6;">
+            <i data-lucide="video" style="width: 24px; height: 24px;"></i>
+          </div>
+          <div>
+            <h4>LiveKit Egress Server (Recording & Streaming)</h4>
+            <p>Containerized Egress workers render composite room audio/video, encode H.264/AAC, and upload encrypted recordings directly to AWS S3 / Google Cloud Storage for compliance.</p>
+          </div>
+        </div>
+
+        <div class="arch-feature-card">
+          <div class="arch-icon-box" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8;">
+            <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i>
+          </div>
+          <div>
+            <h4>100% App-to-App VoIP Privacy</h4>
+            <p>Users never exchange real phone numbers or WhatsApp credentials. All communication happens purely through encrypted WebRTC tokens and ephemeral session keys.</p>
+          </div>
+        </div>
+
+        <div class="arch-feature-card">
+          <div class="arch-icon-box" style="background: rgba(16, 185, 129, 0.15); color: #34d399;">
+            <i data-lucide="activity" style="width: 24px; height: 24px;"></i>
+          </div>
+          <div>
+            <h4>Real-time Billing Webhook Dispatcher</h4>
+            <p>LiveKit server webhooks trigger instant millisecond-level billing calculations, automatically handling wallet deductions and creator payouts with zero leakage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core App Features Grid (4 Columns) -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-badge">Platform Highlights</span>
+      <h2 class="section-title">Designed for Seamless, Safe & <span class="gradient-text">Rewarding Conversations</span></h2>
+      <p class="section-description">Everything you need for spontaneous talks, certified professional advice, and flexible earning.</p>
+    </div>
+
+    <div class="features-grid-4">
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="headphones" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>Voice Bio Preview</h3>
+        <p>Listen to authentic 15-second voice snippets and introductions before deciding to initiate a 1-on-1 call.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="shield-alert" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>AI Moderation Shield</h3>
+        <p>Built-in toxic speech detection, 1-tap instant caller block, automated safety warnings, and strict merchant terms audit.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="wallet-cards" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>Per-Second Fair Billing</h3>
+        <p>No rounding up to the nearest minute. Pay strictly for the exact seconds you talk using your in-app rupee wallet.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="badge-dollar-sign" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>Instant Host Payouts</h3>
+        <p>Verified creators, hosts and professionals earn top rates and withdraw directly to their UPI ID or Bank account daily.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Host / Professional Earning Onboarding Banner with Calculator -->
+  <section class="section" style="padding-top: 0;">
+    <div class="host-banner-card">
+      <div class="host-banner-content">
+        <span class="section-badge">Creator & Expert Program</span>
+        <h2>Become a Host or Verified Professional on Hello24</h2>
+        <p>
+          Turn your conversation skills or professional domain expertise into a steady daily income. Talk to people from all across the country from the comfort of your home.
+        </p>
+
+        <div class="host-perks-list">
+          <div class="host-perk-item"><i data-lucide="check" style="color: #34d399;"></i> Set your own per-minute rates</div>
+          <div class="host-perk-item"><i data-lucide="check" style="color: #34d399;"></i> Daily instant UPI withdrawals</div>
+          <div class="host-perk-item"><i data-lucide="check" style="color: #34d399;"></i> 100% anonymous & safe</div>
+          <div class="host-perk-item"><i data-lucide="check" style="color: #34d399;"></i> Work whenever you want (24/7)</div>
+        </div>
+
+        <a href="contact.html?type=host" class="btn btn-primary btn-lg">
+          <i data-lucide="sparkles" style="width: 18px; height: 18px;"></i> Apply as Host / Expert
+        </a>
+      </div>
+
+      <div class="calculator-card">
+        <h4 style="font-size: 18px; color: #cbd5e1; margin-bottom: 6px;">Monthly Earning Calculator</h4>
+        <p style="font-size: 13px; color: var(--text-muted);">See how much you can earn based on your time</p>
+        
+        <div style="margin: 20px 0;">
+          <label style="font-size: 13px; color: #a78bfa; font-weight: 600;">Talking Hours Per Day: <span id="hours-val">3 Hours</span></label>
+          <input type="range" min="1" max="10" value="3" class="calc-range-slider" id="hours-slider" oninput="updateEarnings(this.value)">
+        </div>
+
+        <div style="font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.5px;">Estimated Monthly Income</div>
+        <div class="earnings-display" id="earnings-total">₹36,000</div>
+        <p style="font-size: 12px; color: var(--text-subtle);">Calculated at avg ₹8/min host share with daily payouts</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real User & Expert Reviews -->
+  <section class="section">
+    <div class="section-header">
+      <span class="section-badge">Community Stories</span>
+      <h2 class="section-title">Loved by Over <span class="gradient-text">250,000+ Users</span></h2>
+      <p class="section-description">Hear how Hello24 brings meaningful conversations and expert guidance to life.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I love chatting on Hello24 after a long tiring workday. Finding genuine, friendly people without revealing my phone number has made this my favorite social app."</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar">RK</div>
+          <div class="reviewer-info">
+            <h5>Rahul Kashyap</h5>
+            <span>Software Engineer • Bangalore</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"As a certified clinical therapist, Hello24 gives me a seamless platform to provide confidential 1-on-1 audio consultations. The LiveKit audio clarity is phenomenal."</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar" style="background: linear-gradient(135deg, #06b6d4, #3b82f6);">DA</div>
+          <div class="reviewer-info">
+            <h5>Dr. Ananya Roy</h5>
+            <span>Verified Psychologist • Delhi</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text">"I earn over ₹45,000 every month just hosting language practice talks in the evening. Payouts arrive directly to my UPI ID without any delays!"</p>
+        <div class="reviewer-meta">
+          <div class="reviewer-avatar" style="background: linear-gradient(135deg, #10b981, #059669);">PS</div>
+          <div class="reviewer-info">
+            <h5>Pooja Sharma</h5>
+            <span>Verified Host • Mumbai</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download App Section -->
+  <section class="download-section" id="download">
+    <div class="download-box">
+      <span class="section-badge">Get the Mobile App</span>
+      <h2 style="font-size: 38px; margin: 16px 0;">Start Your First Call Today</h2>
+      <p style="color: var(--text-muted); font-size: 17px; max-width: 600px; margin: 0 auto 30px;">
+        Download Hello24 on Android and iOS. Get ₹50 welcome talktime bonus on signing up!
+      </p>
+
+      <div class="download-btn-group">
+        <a href="#" class="store-btn">
+          <i data-lucide="play" style="width: 28px; height: 28px; color: #38bdf8;"></i>
+          <div>
+            <small>GET IT ON</small>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+
+        <a href="#" class="store-btn">
+          <i data-lucide="apple" style="width: 28px; height: 28px; color: #fff;"></i>
+          <div>
+            <small>Download on the</small>
+            <strong>App Store</strong>
+          </div>
+        </a>
+
+        <a href="#" class="store-btn">
+          <i data-lucide="download-cloud" style="width: 28px; height: 28px; color: #10b981;"></i>
+          <div>
+            <small>DIRECT APK</small>
+            <strong>Android v2.4 (22MB)</strong>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="section" style="padding-top: 0;">
+    <div class="section-header">
+      <span class="section-badge">FAQ</span>
+      <h2 class="section-title">Frequently Asked Questions</h2>
+    </div>
+
+    <div class="faq-accordion">
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>Is my phone number visible to the person I'm calling?</span>
+          <i data-lucide="chevron-down" class="faq-chevron"></i>
+        </div>
+        <div class="faq-answer">
+          No, never! Hello24 is a 100% app-to-app VoIP platform built on WebRTC and LiveKit. Neither your phone number, real name, nor personal contacts are ever shared with any host or caller.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>How does per-second billing and wallet work?</span>
+          <i data-lucide="chevron-down" class="faq-chevron"></i>
+        </div>
+        <div class="faq-answer">
+          You recharge your Hello24 in-app wallet with secure UPI/Card/NetBanking. When you make a call, talktime is calculated strictly per-second. If a call lasts 2 minutes and 15 seconds, you only pay for exactly 135 seconds.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>How can I consult a verified doctor or astrologer?</span>
+          <i data-lucide="chevron-down" class="faq-chevron"></i>
+        </div>
+        <div class="faq-answer">
+          Simply browse the "Verified Professionals" tab, review their credentials, user ratings, and per-minute consultation fee. Tap "Consult Now" to start an instant private 1-on-1 audio or video session.
+        </div>
+      </div>
+
+      <div class="faq-item" onclick="toggleFaq(this)">
+        <div class="faq-question">
+          <span>What technology powers the call audio quality?</span>
+          <i data-lucide="chevron-down" class="faq-chevron"></i>
+        </div>
+        <div class="faq-answer">
+          Hello24 is powered by LiveKit SFU (WebRTC), utilizing Opus 48kHz high-definition audio compression, adaptive jitter buffers, and LiveKit Egress for server-side recording and compliance pipelines.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modern Footer -->
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>
+          Next-generation real-time app-to-app voice & video calling marketplace. Connect with friendly companions and verified professionals safely with LiveKit infrastructure.
+        </p>
+        <div class="live-pill" style="margin-top: 10px;">
+          <span class="pulse-dot"></span>
+          <span>LiveKit SFU Cluster: Online (32ms)</span>
+        </div>
       </div>
-      <div>
-        <h4>Important Links</h4>
+
+      <div class="footer-column">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="#discovery">Find Friends</a>
+        <a href="#discovery">Consult Experts</a>
+        <a href="pricing.html">Wallet & Plans</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>Company</h4>
         <a href="about.html">About Us</a>
-        <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
+        <a href="contact.html?type=host">Become a Host</a>
+        <a href="contact.html?type=careers">Careers</a>
       </div>
-      <div>
+
+      <div class="footer-column">
         <h4>Legal Policies</h4>
-        <a href="terms.html">Terms & Conditions</a>
+        <a href="terms.html">Terms of Service</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
-        <a href="shipping.html">Shipping & Delivery</a>
+        <a href="shipping.html">Shipping & Digital Delivery</a>
       </div>
     </div>
+
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All rights reserved.</p>
+      <div class="footer-tags">
+        <span>WebRTC LiveKit</span>
+        <span>•</span>
+        <span>LiveKit Egress</span>
+        <span>•</span>
+        <span>100% Encrypted</span>
+      </div>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Interactive Call Simulator Modal (The "WOW" Feature) -->
+  <div class="modal-backdrop" id="callModalBackdrop">
+    <div class="call-modal">
+      <button class="modal-close-btn" onclick="closeCallModal()">
+        <i data-lucide="x" style="width: 16px; height: 16px;"></i>
+      </button>
+
+      <div class="call-modal-avatar">
+        <div class="calling-wave-ring"></div>
+        <div id="modal-avatar-placeholder" style="width: 100%; height: 100%; border-radius: 50%; background: linear-gradient(135deg, #8b5cf6, #ec4899); display: grid; place-items: center; font-size: 36px; border: 3px solid #8b5cf6;">
+          🎧
+        </div>
+      </div>
+
+      <h3 id="modal-caller-name" style="font-size: 22px; margin-bottom: 4px;">Priya Sharma</h3>
+      <p id="modal-caller-topic" style="color: var(--text-muted); font-size: 14px; margin-bottom: 12px;">Late Night Talks & Music</p>
+
+      <div class="call-status-label">
+        <span class="pulse-dot"></span>
+        <span id="call-status-text">Connected (LiveKit SFU HD Audio)</span>
+      </div>
+
+      <div class="call-timer" id="call-timer-display">00:00</div>
+
+      <div class="call-billing-ticker">
+        <i data-lucide="wallet" style="width: 14px; height: 14px;"></i>
+        <span>Balance: ₹<span id="modal-wallet-balance">248.50</span> (<span id="modal-rate-indicator">₹5</span>/min)</span>
+      </div>
+
+      <!-- Real Dynamic Audio Visualizer Wave Canvas -->
+      <canvas id="visualizerCanvas" class="visualizer-canvas" width="360" height="60"></canvas>
+
+      <div class="call-controls">
+        <button class="call-ctrl-btn" id="muteBtn" onclick="toggleMute(this)" title="Mute/Unmute Mic">
+          <i data-lucide="mic" style="width: 22px; height: 22px;"></i>
+        </button>
+
+        <button class="call-ctrl-btn" id="speakerBtn" onclick="toggleSpeaker(this)" title="Speaker Output">
+          <i data-lucide="volume-2" style="width: 22px; height: 22px;"></i>
+        </button>
+
+        <button class="call-ctrl-btn" id="videoBtn" onclick="toggleVideo(this)" title="Camera">
+          <i data-lucide="video" style="width: 22px; height: 22px;"></i>
+        </button>
+
+        <button class="call-ctrl-btn btn-end" onclick="closeCallModal()" title="End Call">
+          <i data-lucide="phone-off" style="width: 26px; height: 26px;"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
   <script>
     lucide.createIcons();
+
+    // Tab Switcher
+    function switchTab(tabName, btnElement) {
+      document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+      btnElement.classList.add('active');
+
+      document.getElementById('tab-social').style.display = (tabName === 'social') ? 'grid' : 'none';
+      document.getElementById('tab-professionals').style.display = (tabName === 'professionals') ? 'grid' : 'none';
+      document.getElementById('tab-rooms').style.display = (tabName === 'rooms') ? 'grid' : 'none';
+    }
+
+    // FAQ Accordion
+    function toggleFaq(item) {
+      item.classList.toggle('open');
+    }
+
+    // Host Earning Calculator
+    function updateEarnings(hours) {
+      document.getElementById('hours-val').innerText = hours + " Hours";
+      // Formula: hours * 60 min * ₹8/min * 25 working days
+      const total = hours * 60 * 8 * 25;
+      document.getElementById('earnings-total').innerText = '₹' + total.toLocaleString('en-IN');
+    }
+
+    // Voice Bio Simulation Alert
+    function simulateVoiceBio(name) {
+      alert("🎙️ Playing 12-second voice introduction for " + name + " (LiveKit Opus Stream preview)...");
+    }
+
+    // Call Simulation Engine
+    let callInterval = null;
+    let callSeconds = 0;
+    let currentRatePerMin = 5;
+    let walletBalance = 250.00;
+    let animFrameId = null;
+
+    function openCallModal(name, topic, imgUrl, rate) {
+      document.getElementById('modal-caller-name').innerText = name;
+      document.getElementById('modal-caller-topic').innerText = topic;
+      currentRatePerMin = parseFloat(rate) || 5;
+      document.getElementById('modal-rate-indicator').innerText = (currentRatePerMin === 0) ? 'FREE' : ('₹' + currentRatePerMin);
+
+      const avatarPlaceholder = document.getElementById('modal-avatar-placeholder');
+      if (name.includes('Dr.') || name.includes('Advocate') || name.includes('Acharya')) {
+        avatarPlaceholder.innerText = '👨‍⚕️';
+      } else if (name.includes('Priya') || name.includes('Sneha')) {
+        avatarPlaceholder.innerText = '👩';
+      } else if (name.includes('Stage') || name.includes('Shayari') || name.includes('Room')) {
+        avatarPlaceholder.innerText = '🎙️';
+      } else {
+        avatarPlaceholder.innerText = '🎧';
+      }
+
+      callSeconds = 0;
+      updateTimerDisplay();
+      document.getElementById('callModalBackdrop').classList.add('active');
+
+      // Start Call Timer & Real-time Per-Second Wallet Deductions
+      clearInterval(callInterval);
+      callInterval = setInterval(() => {
+        callSeconds++;
+        updateTimerDisplay();
+
+        if (currentRatePerMin > 0) {
+          const perSecCost = currentRatePerMin / 60;
+          walletBalance = Math.max(0, walletBalance - perSecCost);
+          document.getElementById('modal-wallet-balance').innerText = walletBalance.toFixed(2);
+        }
+      }, 1000);
+
+      // Start Visualizer Canvas
+      startWaveformVisualizer();
+      lucide.createIcons();
+    }
+
+    function closeCallModal() {
+      document.getElementById('callModalBackdrop').classList.remove('active');
+      clearInterval(callInterval);
+      if (animFrameId) cancelAnimationFrame(animFrameId);
+    }
+
+    function updateTimerDisplay() {
+      const mins = String(Math.floor(callSeconds / 60)).padStart(2, '0');
+      const secs = String(callSeconds % 60).padStart(2, '0');
+      document.getElementById('call-timer-display').innerText = `${mins}:${secs}`;
+    }
+
+    function toggleMute(btn) {
+      btn.classList.toggle('active');
+      const icon = btn.querySelector('i');
+      if (btn.classList.contains('active')) {
+        btn.innerHTML = '<i data-lucide="mic-off" style="width: 22px; height: 22px;"></i>';
+      } else {
+        btn.innerHTML = '<i data-lucide="mic" style="width: 22px; height: 22px;"></i>';
+      }
+      lucide.createIcons();
+    }
+
+    function toggleSpeaker(btn) {
+      btn.classList.toggle('active');
+    }
+
+    function toggleVideo(btn) {
+      btn.classList.toggle('active');
+      alert(btn.classList.contains('active') ? "🎥 LiveKit Video track enabled!" : "📹 Video track paused (Audio only mode).");
+    }
+
+    // Dynamic Sound Wave Visualizer on HTML5 Canvas
+    function startWaveformVisualizer() {
+      const canvas = document.getElementById('visualizerCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let step = 0;
+
+      function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        const bars = 36;
+        const barWidth = canvas.width / bars;
+
+        for (let i = 0; i < bars; i++) {
+          const height = Math.sin((i * 0.3) + step) * 20 + Math.cos((i * 0.2) + step * 1.5) * 15 + 25;
+          const x = i * barWidth;
+          const y = (canvas.height - height) / 2;
+
+          const gradient = ctx.createLinearGradient(0, y, 0, y + height);
+          gradient.addColorStop(0, '#a78bfa');
+          gradient.addColorStop(0.5, '#ec4899');
+          gradient.addColorStop(1, '#06b6d4');
+
+          ctx.fillStyle = gradient;
+          ctx.beginPath();
+          ctx.roundRect(x + 2, y, barWidth - 4, height, 4);
+          ctx.fill();
+        }
+
+        step += 0.08;
+        animFrameId = requestAnimationFrame(draw);
+      }
+
+      draw();
+    }
   </script>
 </body>
 </html>

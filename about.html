@@ -3,72 +3,128 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - Hello24</title>
+  <title>About Us - Hello24 | The Real-Time Voice Calling Revolution</title>
+  <meta name="description" content="Learn about Hello24's mission: enabling 1-on-1 human connection, casual social friendship talks, and verified professional consultations with 100% privacy and LiveKit WebRTC.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html" class="active-link">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#discovery">Find People & Experts</a></li>
+      <li><a href="index.html#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html" class="active-link">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="index.html#download" class="btn btn-primary btn-sm">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Get App
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
     <a class="back-button" href="index.html">
-      <i data-lucide="arrow-left" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></i> Back to Home
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Home
     </a>
-    <h1>About Us</h1>
-    
-    <div class="about-content">
-      <p class="lead-text">Hello24 is a premium, secure, voice-first marketplace connecting users with verified hosts for life conversations, language practice, and social talk.</p>
-      
-      <div class="vision-grid">
-        <div class="vision-card">
-          <h3>Voice-Only Focus</h3>
-          <p>We believe in the power of voice. By eliminating photos and video, we reduce superficial judgments, letting users focus entirely on conversation, vibe, and deep connections.</p>
+
+    <div style="text-align: center; max-width: 720px; margin: 0 auto 50px;">
+      <span class="section-badge">Our Mission & Story</span>
+      <h1 style="font-size: 46px; margin: 16px 0;">Bridging Human Connections with <span class="gradient-text">Pure Voice & Trust</span></h1>
+      <p class="section-intro">
+        In an era of superficial swiping and endless text screens, Hello24 brings back the warmth, spontaneity, and authenticity of real human voice conversations.
+      </p>
+    </div>
+
+    <!-- Vision Showcase Image -->
+    <div style="border-radius: 24px; overflow: hidden; margin-bottom: 50px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 20px 60px rgba(0,0,0,0.6);">
+      <img src="assets/images/social_expert_calling.jpg" alt="Social calling and expert consultations on Hello24" style="width: 100%; height: auto; display: block;">
+    </div>
+
+    <!-- 3 Pillars Grid -->
+    <div class="features-grid-4" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 50px;">
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="heart-handshake" style="width: 28px; height: 28px;"></i>
         </div>
-        <div class="vision-card">
-          <h3>Safety First</h3>
-          <p>We are built with safety at our core. Block lists, rating constraints, active merchant reviews, and automated terms compliance audit ensure a secure environment for everyone.</p>
-        </div>
+        <h3>1. Social Friendship</h3>
+        <p>Talk freely with friendly people (Boy/Girl match, casual banter, late night stories, language learning) without risking your personal phone number.</p>
       </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="stethoscope" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>2. Professional Advice</h3>
+        <p>Connect instantly with verified doctors, mental health counselors, astrologers, lawyers and tech mentors for private 1-on-1 consultations.</p>
+      </div>
+
+      <div class="feature-box">
+        <div class="feature-icon-wrapper">
+          <i data-lucide="cpu" style="width: 28px; height: 28px;"></i>
+        </div>
+        <h3>3. LiveKit WebRTC Core</h3>
+        <p>Built with enterprise-grade LiveKit SFU and LiveKit Egress server architecture for crystal-clear Opus 48kHz HD sound and sub-40ms latency.</p>
+      </div>
+    </div>
+
+    <!-- Privacy Guarantee Section -->
+    <div class="legal-section">
+      <h2 style="color: #38bdf8; display: flex; align-items: center; gap: 8px;">
+        <i data-lucide="shield-check" style="width: 24px; height: 24px;"></i> Our Strict Privacy Guarantee
+      </h2>
+      <p>
+        At Hello24, your security and anonymity are non-negotiable. All calls are initiated over encrypted WebRTC channels. We never store personal contact numbers, never share customer phone numbers with hosts, and employ automated safety filters to protect our community.
+      </p>
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>Next-generation real-time app-to-app voice & video calling marketplace.</p>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Important Links</h4>
         <a href="about.html">About Us</a>
         <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Legal Policies</h4>
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
         <a href="shipping.html">Shipping & Delivery</a>
       </div>
+      <div class="footer-column">
+        <h4>Trust & Safety</h4>
+        <a href="index.html#livekit-tech">LiveKit Engine</a>
+        <a href="privacy.html">Privacy Shield</a>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

@@ -7,70 +7,95 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#discovery">Find People & Experts</a></li>
+      <li><a href="index.html#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="index.html#download" class="btn btn-primary btn-sm">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Get App
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
     <a class="back-button" href="index.html">
-      <i data-lucide="arrow-left" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></i> Back to Home
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Home
     </a>
-    <h1>Refund & Cancellation Policy</h1>
-    <p class="last-updated">Last Updated: July 09, 2026</p>
+    <h1 style="font-size: 42px; margin-bottom: 8px;">Refund & Cancellation Policy</h1>
+    <p style="color: var(--text-subtle); margin-bottom: 30px;">Last Updated: August 2026</p>
 
-    <section class="legal-section">
-      <h2>1. Wallet Recharges</h2>
-      <p>All in-app wallet recharges made using payment gateways (UPI, Cards, NetBanking) are final. Wallet balance cannot be withdrawn directly to your bank account except under special support circumstances or during complete account closures.</p>
-    </section>
+    <div class="legal-section">
+      <h2>1. Unused Wallet Balance Refund</h2>
+      <p>
+        Users may request a full refund of any unspent wallet balance directly back to their source bank account or original UPI ID within 14 days of recharge, with zero cancellation penalties.
+      </p>
+    </div>
 
-    <section class="legal-section">
-      <h2>2. Call Failure Adjustments</h2>
-      <p>If a call gets disconnected due to technical server failures, network drops on our end, or LiveKit channel drops within the first 10 seconds, the charged wallet amount for that session will be fully reverted to your in-app wallet immediately.</p>
-    </section>
+    <div class="legal-section">
+      <h2>2. Call Quality & Technical Dispute Claims</h2>
+      <p>
+        In the rare event of a call drop or network glitch caused by server-side LiveKit connectivity, users can report the call timestamp within 24 hours. Once verified, the exact debited talktime is instantly credited back to your wallet.
+      </p>
+    </div>
 
-    <section class="legal-section">
-      <h2>3. Processing of Refund Requests</h2>
-      <p>If you experience transaction failures where money was deducted from your bank account but wallet balance was not updated, the payment gateway will automatically revert the amount to your source bank within <strong>5 to 7 business days</strong>.</p>
-      <p>For custom disputes, contact our merchant support team at <strong>support@hello24.com</strong>.</p>
-    </section>
+    <div class="legal-section">
+      <h2>3. Host Cancellation Policy</h2>
+      <p>
+        If a scheduled consultation with a verified professional is cancelled prior to call initiation, 100% of the booking balance is restored immediately.
+      </p>
+    </div>
   </div>
 
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>Next-generation real-time app-to-app voice & video calling marketplace.</p>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Important Links</h4>
         <a href="about.html">About Us</a>
         <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Legal Policies</h4>
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
         <a href="shipping.html">Shipping & Delivery</a>
       </div>
+      <div class="footer-column">
+        <h4>Trust & Tech</h4>
+        <a href="index.html#livekit-tech">LiveKit Engine</a>
+        <a href="privacy.html">Privacy Shield</a>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>

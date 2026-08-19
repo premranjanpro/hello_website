@@ -1,99 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact Us - Hello24</title>
+  <title>Contact Us & Host Onboarding - Hello24</title>
+  <meta name="description" content="Get in touch with Hello24 support or apply to become a verified host, doctor, counselor or expert consultant.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html" class="active-link">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#discovery">Find People & Experts</a></li>
+      <li><a href="index.html#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html" class="active-link">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="index.html#download" class="btn btn-primary btn-sm">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Get App
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
     <a class="back-button" href="index.html">
-      <i data-lucide="arrow-left" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></i>
-      Back to Home
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Home
     </a>
-    <h1>Contact Us</h1>
-    <p class="section-intro">For any support, billing queries, or legal inquiries, please contact our merchant support
-      office.</p>
 
-    <div class="contact-card-grid">
+    <div style="text-align: center; max-width: 680px; margin: 0 auto 40px;">
+      <span class="section-badge">Get in Touch</span>
+      <h1 style="font-size: 46px; margin: 16px 0;">We're Here to Help</h1>
+      <p class="section-intro">
+        Have questions about wallet recharges, host onboarding, or technical LiveKit API integration? Reach out to our dedicated 24/7 support desk.
+      </p>
+    </div>
 
-      <!-- EMAIL CONTACT CARD -->
-      <div class="contact-info-card">
-        <i data-lucide="mail" class="contact-icon" style="width: 32px; height: 32px;"></i>
-        <h3>Email Support</h3>
+    <!-- Contact Grid -->
+    <div class="contact-grid">
+      <!-- Contact Info Cards -->
+      <div class="contact-card-box">
+        <h3 style="font-size: 24px; margin-bottom: 20px;">Contact Channels</h3>
+        
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="background: rgba(139, 92, 246, 0.15); padding: 12px; border-radius: 12px; color: #c084fc;">
+              <i data-lucide="mail" style="width: 24px; height: 24px;"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">Email Support</h4>
+              <p style="color: var(--text-muted); font-size: 14px; margin: 0;">support@hello24.app</p>
+              <p style="color: var(--text-muted); font-size: 14px; margin: 0;">creators@hello24.app (Host Help)</p>
+            </div>
+          </div>
 
-        <!-- STEP 1: CHANGE YOUR EMAIL HERE -->
-        <p>gindiahr@gmail.com</p>
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="background: rgba(16, 185, 129, 0.15); padding: 12px; border-radius: 12px; color: #34d399;">
+              <i data-lucide="message-circle" style="width: 24px; height: 24px;"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">WhatsApp & Telegram Desk</h4>
+              <p style="color: var(--text-muted); font-size: 14px; margin: 0;">+91 98765 43210 (24/7 Chat)</p>
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 16px; align-items: flex-start;">
+            <div style="background: rgba(6, 182, 212, 0.15); padding: 12px; border-radius: 12px; color: #38bdf8;">
+              <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+            </div>
+            <div>
+              <h4 style="font-size: 16px; margin-bottom: 4px;">Corporate Headquarters</h4>
+              <p style="color: var(--text-muted); font-size: 14px; margin: 0;">Hello24 Technologies Pvt. Ltd.<br>Outer Ring Road, Bengaluru, Karnataka, India - 560103</p>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 30px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 14px; border: 1px solid var(--border-light);">
+          <h5 style="font-size: 14px; color: #34d399; margin-bottom: 6px;">⚡ Average Response Time</h5>
+          <p style="font-size: 13px; color: var(--text-subtle); margin: 0;">Customer queries: &lt; 15 mins • Host approval: &lt; 2 hours</p>
+        </div>
       </div>
 
-      <!-- PHONE/MOBILE CONTACT CARD -->
-      <div class="contact-info-card">
-        <i data-lucide="phone" class="contact-icon" style="width: 32px; height: 32px;"></i>
-        <h3>Support Hotline</h3>
+      <!-- Contact / Host Application Form -->
+      <div class="contact-card-box">
+        <h3 style="font-size: 24px; margin-bottom: 20px;">Send a Message or Apply</h3>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('🎉 Thank you for reaching out! A representative will connect with you shortly.');">
+          <div class="form-group">
+            <label>I am reaching out as:</label>
+            <select class="form-input" style="background: #14132a;">
+              <option>App User (Wallet / Calling Help)</option>
+              <option>Prospective Host / Creator</option>
+              <option>Verified Professional (Doctor, Astrologer, Lawyer)</option>
+              <option>Developer / API Integration Inquiry</option>
+            </select>
+          </div>
 
-        <!-- STEP 2: CHANGE YOUR MOBILE NUMBER HERE -->
-        <p>+91 6202254762</p>
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" class="form-input" placeholder="e.g. Rahul Sharma" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email or WhatsApp Number</label>
+            <input type="text" class="form-input" placeholder="e.g. rahul@example.com / +91 98765..." required>
+          </div>
+
+          <div class="form-group">
+            <label>Message / Application Bio</label>
+            <textarea class="form-textarea" placeholder="Tell us how we can help you or describe your expertise..." required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary" style="width: 100%;">
+            <i data-lucide="send" style="width: 16px; height: 16px;"></i> Submit Inquiry
+          </button>
+        </form>
       </div>
-
-      <!-- NAME & REGISTERED ADDRESS CARD -->
-      <div class="contact-info-card">
-        <i data-lucide="map-pin" class="contact-icon" style="width: 32px; height: 32px;"></i>
-        <h3>Registered Address</h3>
-
-        <!-- STEP 3: CHANGE YOUR COMPANY NAME AND ADDRESS HERE -->
-        <p>Hello24,</p>
-        <p>Kankarbagh,</p>
-        <p>Patna , Bihar - 800020</p>
-      </div>
-
     </div>
   </div>
 
+  <!-- Footer -->
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>Next-generation real-time app-to-app voice & video calling marketplace.</p>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Important Links</h4>
         <a href="about.html">About Us</a>
         <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Legal Policies</h4>
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
         <a href="shipping.html">Shipping & Delivery</a>
       </div>
+      <div class="footer-column">
+        <h4>Trust & Safety</h4>
+        <a href="index.html#livekit-tech">LiveKit Engine</a>
+        <a href="privacy.html">Privacy Shield</a>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
-
 </html>

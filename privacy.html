@@ -7,79 +7,105 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
 
+  <!-- Navigation Bar -->
   <nav>
-    <a href="index.html" style="text-decoration: none;"><b>Hello24</b></a>
-    <a href="pricing.html">Pricing</a>
-    <a href="about.html">About Us</a>
-    <a href="contact.html">Contact Us</a>
-    <a href="index.html#download"><button>Download App</button></a>
+    <a href="index.html" class="nav-brand">
+      <div class="nav-logo-icon">
+        <i data-lucide="phone-call" style="width: 22px; height: 22px; color: #fff;"></i>
+      </div>
+      <span>Hello24</span>
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#discovery">Find People & Experts</a></li>
+      <li><a href="index.html#livekit-tech">LiveKit Engine</a></li>
+      <li><a href="pricing.html">Pricing & Wallet</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="nav-actions">
+      <a href="index.html#download" class="btn btn-primary btn-sm">
+        <i data-lucide="download" style="width: 16px; height: 16px;"></i> Get App
+      </a>
+    </div>
   </nav>
 
   <div class="content-container">
     <a class="back-button" href="index.html">
-      <i data-lucide="arrow-left" style="width: 16px; height: 16px; display: inline-block; vertical-align: middle;"></i> Back to Home
+      <i data-lucide="arrow-left" style="width: 16px; height: 16px;"></i> Back to Home
     </a>
-    <h1>Privacy Policy</h1>
-    <p class="last-updated">Last Updated: July 09, 2026</p>
+    <h1 style="font-size: 42px; margin-bottom: 8px;">Privacy Policy</h1>
+    <p style="color: var(--text-subtle); margin-bottom: 30px;">Last Updated: August 2026</p>
 
-    <section class="legal-section">
+    <div class="legal-section">
       <h2>1. Information We Collect</h2>
       <ul>
-        <li><strong>Mobile Number:</strong> Used strictly for authentication, OTP verification, and account security.</li>
-        <li><strong>Username & Profile Details:</strong> Displayed to other users and hosts during calling interactions.</li>
-        <li><strong>Device Information:</strong> We store device models, operating systems, and FCM tokens to send incoming call push notifications.</li>
-        <li><strong>Date of Birth:</strong> Collected solely to verify age compliance (18+ constraint).</li>
+        <li><strong>Authentication:</strong> Mobile numbers or OAuth tokens are used solely for account authentication, anti-abuse checks, and OTP security.</li>
+        <li><strong>Zero Number Disclosure:</strong> Your actual phone number is strictly shielded and NEVER shared with other users, hosts, or consultants.</li>
+        <li><strong>Device Identifiers:</strong> Device model, OS, and FCM push tokens used exclusively for dispatching incoming VoIP call notifications.</li>
+        <li><strong>Age Verification:</strong> Age compliance checks ensure all members in open voice rooms are 18+.</li>
       </ul>
-    </section>
+    </div>
 
-    <section class="legal-section">
-      <h2>2. Audio Streams & Privacy</h2>
-      <p>Hello24 provides real-time peer-to-peer audio calls using WebRTC (via LiveKit). We do NOT record, log, or store call voice streams on our servers. Your conversations remain completely private and ephemeral.</p>
-    </section>
+    <div class="legal-section">
+      <h2>2. Audio Streams & LiveKit WebRTC Encryption</h2>
+      <p>
+        Hello24 facilitates direct app-to-app real-time audio and video sessions over LiveKit WebRTC using DTLS-SRTP end-to-end encryption. Unrecorded casual calls are completely ephemeral and are never tapped or stored.
+      </p>
+    </div>
 
-    <section class="legal-section">
-      <h2>3. Data Protection & Sharing</h2>
-      <p>We do not sell, trade, or share your personal data with third-party advertisers. Data is shared only with security/hosting partners (like Google Firebase and LiveKit WebRTC nodes) to facilitate calling operations.</p>
-    </section>
+    <div class="legal-section">
+      <h2>3. LiveKit Egress & Moderation Archiving</h2>
+      <p>
+        For verified professional consultations or reported sessions, LiveKit Egress may be used to generate secure encrypted session archives stored in private Amazon S3 buckets solely for audit, compliance, and user safety purposes.
+      </p>
+    </div>
 
-    <section class="legal-section">
-      <h2>4. Your Rights</h2>
-      <p>You can request account deletion at any time directly through the Flutter app settings. Upon deletion, your username, mobile number, wallet records, and device identifiers will be permanently scrubbed from our systems.</p>
-    </section>
+    <div class="legal-section">
+      <h2>4. User Rights & Account Deletion</h2>
+      <p>
+        You have the complete right to delete your profile, wipe chat/call logs, and withdraw your remaining wallet balance at any time from within the app settings.
+      </p>
+    </div>
   </div>
 
   <footer>
     <div class="footer-grid">
-      <div>
+      <div class="footer-brand">
         <h3>Hello24</h3>
-        <p>Hear the vibe. Start a conversation. Anonymous premium audio marketplace with verified hosts.</p>
+        <p>Next-generation real-time app-to-app voice & video calling marketplace.</p>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Important Links</h4>
         <a href="about.html">About Us</a>
         <a href="pricing.html">Pricing & Plans</a>
         <a href="contact.html">Contact Us</a>
       </div>
-      <div>
+      <div class="footer-column">
         <h4>Legal Policies</h4>
         <a href="terms.html">Terms & Conditions</a>
         <a href="privacy.html">Privacy Policy</a>
         <a href="refund.html">Refund & Cancellation</a>
         <a href="shipping.html">Shipping & Delivery</a>
       </div>
+      <div class="footer-column">
+        <h4>Trust & Tech</h4>
+        <a href="index.html#livekit-tech">LiveKit Engine</a>
+        <a href="privacy.html">Privacy Shield</a>
+      </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Hello24. All Rights Reserved. Compliant with Google Play Store & Payment Gateways.</p>
+      <p>&copy; 2026 Hello24 Technologies Pvt. Ltd. All Rights Reserved.</p>
     </div>
   </footer>
 
-  <script src="https://unpkg.com/lucide@latest"></script>
-  <script>
-    lucide.createIcons();
-  </script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
