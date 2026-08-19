@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="logo.png" alt="Hello24 Logo" width="160" />
+</p>
+
 # 📞 Hello24 — Next-Gen App-to-App Voice & Video Calling Platform
 
 <p align="center">
